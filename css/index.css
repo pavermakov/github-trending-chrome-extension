@@ -1,0 +1,155 @@
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: auto;
+  background-color: #c670ca;
+  background-image: linear-gradient(45deg, #c670ca 0%, #25a5c8 52%, #20e275 90%);
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  margin: 0;
+}
+
+.loader,
+.error {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.wrapper {
+  margin: 0 auto;
+  position: absolute;
+  top: 50px;
+  bottom: 50px;
+  width: 100%;
+}
+
+.repositories {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+  .repositories__title {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  .repositories__list {
+    background: white;
+    max-width: 1000px;
+    height: 100%;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 6px;
+    margin: 0 auto;
+  }
+  .repositories__title + .repositories__list {
+    margin-top: 20px;
+  }
+
+.repository {
+  width: 100%;
+  padding: 20px 20px;
+  box-sizing: border-box;
+}
+  .repository + .repository {
+    border-top: 1px solid #586069;
+  }
+  .repository__row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5px 0;
+  }
+  .repository__item + .repository__item {
+    margin-left: 15px;
+  }
+
+.text {
+  font-size: 14px;
+  color: #586069;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: 'Quicksand', sans-serif;
+  cursor: default;
+}
+  .text_small {
+    font-size: 12px;
+  }
+  .text_large {
+    font-size: 20px;
+  }
+  .text_largest {
+    font-size: 40px;
+  }
+  .text_bold {
+    font-weight: bold;
+  }
+  .text_blue {
+    color: #0366d6;
+  }
+
+.language,
+.stats,
+.developers {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.language {}
+  .language__color {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+
+    background-color: aqua;
+  }
+  .language__color + .language__text {
+    margin-left: 2px;
+  }
+
+.stats {}
+  .stats_shifted_right {
+    flex-grow: 1;
+    justify-content: flex-end;
+  }
+  .stats__icon {
+    width: 16px;
+    height: 16px;
+    color: #586069;
+  }
+  .stats__icon + .stats__text {
+    margin-left: 2px;
+  }
+
+.developers {}
+  .developers__image {
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+  }
+  .developers__text + .developers__image,
+  .developers__image + .developers__image {
+    margin-left: 3px;
+  }

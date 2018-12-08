@@ -1,0 +1,16 @@
+{
+  "name": "Github trending",
+  "version": "1.0",
+  "description": "This Chrome extension displays trending repositories on github each time users open a new tab",
+  "manifest_version": 2,
+  "incognito": "split",
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "permissions": [
+     "activeTab"
+   ],
+  "icons": {
+    "128": "icon.png"
+  }
+}
